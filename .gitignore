@@ -7,6 +7,7 @@
 # Services
 /services/log/*
 !/services/log/Log.php
+/services/module/map.ini
 
 # Model
 /model/modules/*
