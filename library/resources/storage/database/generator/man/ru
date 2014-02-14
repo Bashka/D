@@ -1,0 +1,6 @@
+h1: GUID генератор
+Класс GUIDGenerator позволяет формировать GUID версии 4 по запросу. Данный класс реализует интерфейс OIDGenerator, что позволяет использовать его для идентификации OID классов.
+Ниже приведен пример использования службы:
+code: php 20
+echo GUIDGenerator::getInstance()->generateOID(); // Генерация GUID.
+code: end

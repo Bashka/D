@@ -1,0 +1,19 @@
+# Root
+.idea/
+.project
+
+# Library
+
+# Services
+/services/log/*
+!/services/log/Log.php
+
+# Model
+/model/modules/*
+!/model/modules/man/
+!/model/modules/SystemPackages/
+
+# View
+/view/screens/*
+!/view/screens/Console/
+/view/library/YUI/

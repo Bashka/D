@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delphinum Console</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script charset="utf-8" src="/D/view/library/loadConfig.js" type="text/javascript"></script>
+    <script charset="utf-8" src="/D/view/library/YUI/yui/yui-min.js" type="text/javascript"></script>
+    <script charset="utf-8" src="main.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="/D/view/library/YUI/cssreset/cssreset-min.css"/>
+    <link rel="stylesheet" href="/D/view/library/YUI/cssbase/cssbase-min.css"/>
+    <link rel="stylesheet" href="/D/view/library/YUI/cssfonts/cssfonts-min.css"/>
+</head>
+<body class="yui3-skin-sam">
+    <div id="DJS-rootScreen" dWidget="Screen" dModule="Console" dScreen="browse">
+        <div dWidget="Frame" dFilled="true" dTransform="false">
+            <!-- Other -->
+            <div dInject="loadingIndicator" dWidget="LoadingIndicator"></div>
+            <div dInject="hotKey" dWidget="HotKey"></div>
+
+            <!-- Console -->
+            <div>
+                <div dWidget="screens.Console.browse.ConsoleOut" dInject="consoleOut"></div>
+                <div dWidget="screens.Console.browse.ConsoleIn" dInject="consoleIn">
+                    <input type="dSend" value=">"/><input type="dModule" value="Console" />::<input type="dAction" value="test" />(<span class="dArgs"></span>)
+                </div>
+            </div>
+
+            <!-- Tabs -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+=Терминология=
+* Компоненты логических операторов - элементы, являющиеся состовной частью логических операторов. Сюда входят такие элементы, как Поля, Таблицы, Объединения и т.д.
+
+=Основные компоненты=
+Для представления компонента Таблица, представляющего целевую таблицу запроса, используется класс Table. Данный класс инициализируется именем целевой таблицы.
+
+Ниже приведен пример использования данного класса:
+
+ $t = new Table('people');
+ echo $o->interpreter(); // people
+
+Компонент Поле представляется классом Field. Класс инициализируется имене поля и может быть дополнен псевдонимом (alias) с помощью класса FieldAlias, а так же родительской таблицей.
+
+Ниже приведен пример использования данных классов:
+
+ $t = new Table('people');
+ $f = new Field('name');
+ $f->setTable($t);
+ echo $f->interpreter(); // people.name
+ $fa = new FieldAlias($f, 'peopleName');
+ echo $fa->interpreter(); // people.name as peopleName
+
+=Сортировка и ограничение выборки=
+Для сортировки выборки по определенным полям, используется класс OrderBy, представляющий SQL компонент ORDER BY. Класс включает множество полей, по которым должна производится сортировка, а так же тип сортировки ASC или DESC.
+
+Ниже приведен пример использования данного класса:
+
+ $ob = new OrderBy(OrderBy::DESC);
+ $ob->addField(new Field('testA'));
+ $ob->addField(new Field('testB'));
+ echo $ob->interpretation(); // ORDER BY testA,testB DESC
+
+Для ограничения выборки используется класс Limit, представляющий SQL компонент LIMIT.
+
+Ниже приведен пример использования данного класса:
+
+ $l = new Limit(5);
+ echo $l->interpretation('sqlsrv'); // TOP 5
+ echo $l->interpretation('firebird'); // FIRST 5
+ echo $l->interpretation('oci'); // ROWNUM <= 5
+ echo $l->interpretation('mysql'); // LIMIT 5
+ echo $l->interpretation('pgsql'); // LIMIT 5
+ echo $l->interpretation('ibm'); // FETCH FIRST 5 ROWS ONLY
+
+Для использования параметризованного граничения, конструктору Limit не передается параметр:
+ $l = new Limit();
+ echo $l->interpretation('mysql'); // LIMIT ?
+
+=Объединение=
+SQL компонент JOIN представлен классом Join, который определяет объединяемую таблицу и условие объединения.
+
+Ниже приведен пример использования данного класса:
+
+ $о = new Join(Join::INNER, new Table('table'), new LogicOperation(new Field('fieldA'), '=', new Field('fieldB')));
+ echo $j->interpretation(); // INNER JOIN table ON (fieldA = fieldB)
+
+=Фильтрация=
+SQL компонент WHERE представлен классом Where, который использует классы пакета D\library\patterns\entity\SQL\operators\DML\components\condition для формирования условия отбора.
+
+ $w = new Where(new LogicOperation(new Field('a'), '=', 'a'));
+ echo $w->interpretation(); // WHERE (a = "a")

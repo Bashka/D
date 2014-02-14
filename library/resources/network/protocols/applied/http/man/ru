@@ -1,0 +1,51 @@
+=Терминология=
+* Запрос - данные в соответствии с требованиями протокола HTTP, передаваемые с целью запроса некоторой информации;
+* Ответ - данные в соответствии с требованиями протокола HTTP, передаваемые с целью передачи некоторой информации;
+* Параметр сообщения - именнованные данные, позволяющие определить некоторые свойства передаваемой информации;
+* Заголовок сообщения - вся совокупность параметров сообщения;
+* Тело сообщения - передаваемые в сообщении данные.
+
+=Формирование сообщений=
+Классы данного пакета позволяют формировать сообщения типа запроса или ответа по средствам объектного интерфейса. Крассы Parameter, Header и Message реализуют интерфейсы Interpreter и Restorable, что позволяет преобразовывать сообщения в строки для передачи удаленным процессам, а так же восстанавливать их из строк при приеме сообщений от удаленного процесса.
+
+Класс Parameter представляет один параметр заголовка сообщения. В свою очередь Header содержит множество объектов класса Parameter, образуя заголовок сообщения. Message же содержит объект класса Header и тело запроса, представляя все сообщения в целом.
+
+Для разделения типов сообщений на запросы и ответы, реализованы классы Request и Response соответственно. Данные классы являются подклассами класса Message, но включают некоторые заранее определенные форматы данных, присущие только данным типам сообщений.
+
+Рассмотрим пример использования этих классов:
+
+ $req = new Request('127.0.0.1', '/index.html');
+ $req->addParameterHeaderStr('nameA', 'valueA');
+ $req->addParameterHeaderStr('nameB', 'valueB');
+ $req->setBody('test body');
+ echo $req->interpreter();
+ /*
+ GET /index.html HTTP/1.1
+ Cache-Control:no-cache
+ Connection:close
+ Host:127.0.0.1
+ nameA:valueA
+ nameB:valueB
+ Content-Type:application/x-www-form-urlencoded;charset=utf-8
+ Content-Length:9
+ Content-MD5:bbf9afe7431caf5f89a608bc31e8d822
+
+ test body
+ */
+
+ $res = new Response(200, 'OK');
+ $res->addParameterHeaderStr('nameA', 'valueA');
+ $res->addParameterHeaderStr('nameB', 'valueB');
+ $res->setBody('test body');
+ echo $res->interpreter();
+ /* HTTP/1.1 200 OK
+ Cache-Control:no-cache
+ Connection:close
+ nameA:valueA
+ nameB:valueB
+ Content-Type:application/x-www-form-urlencoded;charset=utf-8
+ Content-Length:9
+ Content-MD5:bbf9afe7431caf5f89a608bc31e8d822
+
+ test body
+ */

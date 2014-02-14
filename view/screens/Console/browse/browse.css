@@ -1,0 +1,45 @@
+html{
+    padding: 10px;
+}
+
+/* ConsoleOut */
+.yui3-consoleout {
+    height: 300px;
+    overflow: auto;
+    font-family: "Courier New", monospace;
+    font-size: 12pt;
+}
+
+.yui3-consoleout .pjs-screens-console-browse-request{
+    cursor: pointer;
+}
+
+.yui3-consoleout .pjs-screens-console-browse-answer{
+    color: silver;
+}
+
+.pjs-screens-console-browse-complexAnswer{
+    cursor: help;
+}
+
+
+/* ConsoleIn */
+.yui3-consolein input[type=text] {
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+    color: black;
+}
+
+/* menu */
+/* tab view */
+.yui3-tabview-panel{
+    padding: 10px;
+    height: 200px;
+    overflow: auto;
+}
+
+/*CommandBar*/
+.yui3-commandbar div{
+    cursor: pointer;
+}
