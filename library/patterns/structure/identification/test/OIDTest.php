@@ -3,7 +3,7 @@ namespace D\library\patterns\structure\identification\test;
 
 use D\library\patterns\structure\identification\TOID;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class OIDTest extends \PHPUnit_Framework_TestCase{
   /**
    * Для неидентифицированного объекта должен возвращать null.

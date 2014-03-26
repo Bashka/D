@@ -3,7 +3,7 @@ namespace D\library\resources\fileSystem\components\test;
 
 use D\library\resources\fileSystem\components\File;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class FileTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен выбрасывать исключение, если переименование компонента приведет к дублированию.

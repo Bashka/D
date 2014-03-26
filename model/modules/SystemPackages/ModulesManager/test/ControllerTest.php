@@ -17,7 +17,7 @@ use D\model\modules\SystemPackages\ReflectionModule;
 use D\services\database\EntityManagerFabric;
 use D\services\module\Router;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class ControllerTest extends \PHPUnit_Framework_TestCase {
   /**
    * @var Controller

@@ -4,7 +4,7 @@ namespace D\model\test;
 use D\library\patterns\entity\dataType\Integer;
 use D\model\CentralController;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class CentralControllerTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен возвращать контроллер модуля.

@@ -3,7 +3,7 @@ namespace D\library\resources\storage\database\ORM\mappers\test;
 
 use D\library\resources\storage\database\ORM\mappers\Join;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class JoinTest extends \PHPUnit_Framework_TestCase{
   /**
    * Должен восстанавливать объект из другого объекта.

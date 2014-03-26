@@ -7,7 +7,7 @@ use D\library\patterns\entity\SQL\operators\DML\components\Table;
 use D\library\patterns\entity\SQL\operators\DML\components\Where;
 use D\library\patterns\entity\SQL\operators\DML\components\condition\LogicOperation;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class DeleteTest extends \PHPUnit_Framework_TestCase{
   /**
    * Должен определять целевую таблицу.

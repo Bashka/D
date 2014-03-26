@@ -8,7 +8,7 @@ namespace D\library\language;
 
 // Определение корня системы.
 if(empty($_SERVER['DOCUMENT_ROOT'])){
-  $_SERVER['DOCUMENT_ROOT'] = substr(__DIR__, 0, strpos(__DIR__, '/D'));
+  $_SERVER['DOCUMENT_ROOT'] = substr(__DIR__, 0, strpos(__DIR__, 'D') - 1);
 }
 
 spl_autoload_register(function ($className){

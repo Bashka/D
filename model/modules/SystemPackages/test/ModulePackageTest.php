@@ -4,7 +4,7 @@ namespace D\model\modules\SystemPackages\test;
 use D\model\modules\SystemPackages\ModulePackage;
 use D\model\modules\SystemPackages\ReflectionModule;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class ModulePackageTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен возвращать версию модуля.

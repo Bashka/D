@@ -3,7 +3,7 @@ namespace D\library\resources\storage\cache\drivers\test;
 
 use D\library\resources\storage\cache\drivers\MemcacheAdapter;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class MemcacheAdapterTest extends \PHPUnit_Framework_TestCase {
   /**
    * Адрес службы.

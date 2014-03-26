@@ -3,7 +3,7 @@ namespace D\library\patterns\entity\dataType\special\system\test;
 
 use D\library\patterns\entity\dataType\special\system\GUID4;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class GUID4Test extends \PHPUnit_Framework_TestCase {
   /**
    * @covers D\library\patterns\entity\dataType\special\system\GUID4::isReestablish

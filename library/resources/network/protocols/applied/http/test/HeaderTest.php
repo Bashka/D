@@ -4,7 +4,7 @@ namespace D\library\resources\network\protocols\applied\http\test;
 use D\library\resources\network\protocols\applied\http\Header;
 use D\library\resources\network\protocols\applied\http\Parameter;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class HeaderTest extends \PHPUnit_Framework_TestCase{
   /**
    * @var Header

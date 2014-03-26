@@ -3,7 +3,7 @@ namespace D\services\cache\test;
 
 use D\services\cache\Cache;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class CacheTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен возвращать выбранный драйвер кэша.

@@ -3,7 +3,7 @@ namespace D\library\resources\storage\session\test;
 
 use D\library\resources\storage\session\SessionProvider;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 
 ob_start();
 class SessionProviderTest extends \PHPUnit_Framework_TestCase{

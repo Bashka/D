@@ -6,7 +6,7 @@ use D\library\patterns\entity\SQL\operators\DML\Select;
 use D\library\patterns\entity\SQL\operators\DML\components\Field;
 use D\library\patterns\entity\SQL\operators\DML\components\Table;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class InsertTest extends \PHPUnit_Framework_TestCase{
   /**
    * Должен определять целевую таблицу.

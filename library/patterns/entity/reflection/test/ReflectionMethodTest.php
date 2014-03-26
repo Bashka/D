@@ -3,7 +3,7 @@ namespace D\library\patterns\entity\reflection\test;
 
 use D\library\patterns\entity\reflection\ReflectionMethod;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class ReflectionMethodTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен возвращать отражение указанного параметра.

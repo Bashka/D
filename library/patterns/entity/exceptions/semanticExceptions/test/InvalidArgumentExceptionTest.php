@@ -3,7 +3,7 @@ namespace D\library\patterns\entity\exceptions\semanticExceptions\test;
 
 use D\library\patterns\entity\exceptions\semanticExceptions\InvalidArgumentException;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class InvalidArgumentExceptionTest extends \PHPUnit_Framework_TestCase{
   /**
    * Допустимыми типами являются только n|s|i|f|b|a|o|S|I|F|B|A|O.

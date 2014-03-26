@@ -4,7 +4,7 @@ namespace D\services\config\test;
 use D\services\cache\Cache;
 use D\services\config\SystemConf;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class SystemConfTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен возвращать указанное свойство из файла, если кэширование не используется.

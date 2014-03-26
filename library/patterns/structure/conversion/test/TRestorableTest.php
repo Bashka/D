@@ -1,7 +1,7 @@
 <?php
 namespace D\library\patterns\structure\conversion\test;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class TRestorableTest extends \PHPUnit_Framework_TestCase{
   /**
    * Должен возвращать массив найденных лексем.

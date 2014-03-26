@@ -3,7 +3,7 @@ namespace D\library\resources\fileSystem\components\special\csv\test;
 
 use D\library\resources\fileSystem\components\special\csv\DSV;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class DSVTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен последовательно загружать записи из файла.

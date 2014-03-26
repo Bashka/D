@@ -1,7 +1,7 @@
 <?php
 namespace D\library\patterns\entity\reflection\test;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class TReflectTest extends \PHPUnit_Framework_TestCase {
   /**
    * @var ChildReflectMock

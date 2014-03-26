@@ -3,7 +3,7 @@ namespace D\library\patterns\entity\dataType\special\network\test;
 
 use D\library\patterns\entity\dataType\special\network\EMail;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class EMailTest extends \PHPUnit_Framework_TestCase{
   /**
    * @covers \D\library\patterns\entity\dataType\special\network\EMail::isReestablish

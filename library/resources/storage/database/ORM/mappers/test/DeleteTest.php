@@ -6,7 +6,7 @@ use D\library\patterns\entity\SQL\operators\DML\components\Field;
 use D\library\patterns\entity\SQL\operators\DML\components\Where;
 use D\library\resources\storage\database\ORM\mappers\Delete;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class DeleteTest extends \PHPUnit_Framework_TestCase{
   /**
    * Должен восстанавливать объект из другого объекта.

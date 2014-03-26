@@ -5,7 +5,7 @@ use D\library\resources\storage\cache\CacheAdapter;
 use D\library\resources\storage\cache\drivers\NullAdapter;
 use D\library\resources\storage\cache\ObjectCache;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class ObjectCacheTest extends \PHPUnit_Framework_TestCase {
   /**
    * @var CacheAdapter

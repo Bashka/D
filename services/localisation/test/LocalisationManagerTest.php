@@ -4,7 +4,7 @@ namespace D\services\localisation\test;
 use D\library\resources\storage\session\SessionProvider;
 use D\services\localisation\LocalisationManager;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 session_start();
 class LocalisationManagerTest extends \PHPUnit_Framework_TestCase {
   /**

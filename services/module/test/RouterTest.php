@@ -4,7 +4,7 @@ namespace D\services\module\test;
 use D\services\cache\Cache;
 use D\services\module\Router;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class RouterTest extends \PHPUnit_Framework_TestCase {
   /**
    * При использовании не инициализированного кэша, должен его заполнять.

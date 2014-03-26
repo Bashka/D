@@ -3,7 +3,7 @@ namespace D\library\resources\network\socket\test;
 
 use D\library\resources\network\socket\Socket;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class SocketTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен создавать сокетное соединение.

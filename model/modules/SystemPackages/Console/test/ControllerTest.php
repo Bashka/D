@@ -3,7 +3,7 @@ namespace D\model\modules\SystemPackages\Console\test;
 
 use D\model\modules\SystemPackages\Console\Controller;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class ControllerTest extends \PHPUnit_Framework_TestCase {
   /**
    * @var \D\model\modules\SystemPackages\Console\Controller

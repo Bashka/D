@@ -3,7 +3,7 @@ namespace PPHP\tests\tools\classes\standard\fileSystem\io;
 
 use D\library\resources\fileSystem\io\FileReader;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class FileReaderTest extends \PHPUnit_Framework_TestCase{
   /**
    * @var FileReader

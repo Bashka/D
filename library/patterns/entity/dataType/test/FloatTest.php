@@ -3,7 +3,7 @@ namespace D\library\patterns\entity\dataType\test;
 
 use D\library\patterns\entity\dataType\Float;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class FloatTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен возвращать true - если параметр имеет тип float, иначе - false.

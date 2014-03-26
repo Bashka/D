@@ -3,7 +3,7 @@ namespace D\library\patterns\entity\SQL\builder\test;
 
 use D\library\patterns\entity\SQL\builder\Update;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class UpdateTest extends \PHPUnit_Framework_TestCase{
   /**
    * @var \D\library\patterns\entity\SQL\builder\Update

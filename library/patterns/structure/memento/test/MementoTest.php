@@ -3,7 +3,7 @@ namespace D\library\patterns\structure\memento\test;
 
 use D\library\patterns\structure\memento\Memento;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class MementoTest extends \PHPUnit_Framework_TestCase{
   /**
    * @var Memento

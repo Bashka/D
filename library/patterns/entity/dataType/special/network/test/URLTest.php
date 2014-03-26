@@ -3,7 +3,7 @@ namespace D\library\patterns\entity\dataType\special\network\test;
 
 use D\library\patterns\entity\dataType\special\network\URL;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class URLTest extends \PHPUnit_Framework_TestCase{
   /**
    * @var \D\library\patterns\entity\dataType\special\network\URL

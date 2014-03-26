@@ -8,6 +8,8 @@
 # Services
 /services/log/*
 !/services/log/Log.php
+!/services/log/man/
+!/services/log/test/
 /services/module/map.ini
 
 # Model

@@ -3,7 +3,7 @@ namespace D\library\patterns\entity\dataType\test;
 
 use D\library\patterns\entity\dataType\Arr;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D') - 1) . '/D/starter.php';
 class ArrTest extends \PHPUnit_Framework_TestCase {
   /**
    * Должен возвращать true - если параметр имеет тип array, иначе - false.

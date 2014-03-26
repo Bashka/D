@@ -45,5 +45,5 @@ else
   find -name "*.ini" -exec chmod $dataAccess {} \;
 fi;
 
-chmod 111 preInstall.sh;
+chmod -x preInstall.sh
 echo 'Complete';
