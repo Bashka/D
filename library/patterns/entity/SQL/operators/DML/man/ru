@@ -67,20 +67,20 @@
 =Структура объектных SQL инструкций и компонентов=
 На схеме ниже показано дерево наследования объектных SQL инструкций и компонентов:
 
-img: inheritanceHierarchy.png
+[[File:inheritanceHierarchy.png]]
 
 На схеме ниже показаны ассоциации, доступные для объектной SQL инструкции Select:
 
-img: select.png
+[[File:select.png]]
 
 На схеме ниже показаны ассоциации, доступные для объектной SQL инструкции Update:
 
-img: update.png
+[[File:update.png]]
 
 На схеме ниже показаны ассоциации, доступные для объектной SQL инструкции Insert:
 
-img: insert.png
+[[File:insert.png]]
 
 На схеме ниже показаны ассоциации, доступные для объектной SQL инструкции Delete:
 
-img: delete.png
+[[File:delete.png]]

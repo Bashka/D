@@ -14,7 +14,7 @@ use D\model\classes\ModuleController;
 use D\services\log\Log;
 use D\services\module\Router;
 
-require_once substr(__DIR__, 0, strpos(__DIR__, '/D')) . '/D/starter.php';
+require_once substr(__DIR__, 0, strpos(__DIR__, 'D')) . 'D/starter.php';
 
 /**
  * Служба является единой точной входа системы и отвечает за вызов и передачу модулю сообщений от слоя view, а так же за возврат ему ответа модуля.
