@@ -118,7 +118,7 @@ ob_start();
 // Реакция на Error
 register_shutdown_function(function (){
   $error = error_get_last();
-  if($error['type'] & (E_ERROR | E_CORE_ERROR | E_COMPILE_ERROR | E_USER_ERROR | E_RECOVERABLE_ERROR | E_CORE_WARNING | E_COMPILE_WARNING)){
+  if($error['type'] & (E_ERROR | E_CORE_ERROR | E_COMPILE_ERROR | E_USER_ERROR | E_RECOVERABLE_ERROR | E_CORE_WARNING | E_COMPILE_WARNING | E_PARSE)){
     $buffer = ob_get_contents();
     ob_end_clean();
     header('HTTP/1.0 500 Internal server error');
