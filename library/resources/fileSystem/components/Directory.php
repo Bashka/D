@@ -17,7 +17,7 @@ class Directory extends Component{
   public function rename($newName){
     $newAddress = $this->getLocation().'/'.$newName;
     if(file_exists($newAddress) && is_dir($newAddress)){
-      throw new DuplicationException('Невозможно периименовать каталог ['.$this->getAddress().'], так как каталог с данным именем ['.$newAddress.'] уже существует.');
+      throw new DuplicationException('Невозможно переименовать каталог ['.$this->getAddress().'], так как каталог с данным именем ['.$newAddress.'] уже существует.');
     }
     // Проверка типа выполняется на уровне родителя.
 
